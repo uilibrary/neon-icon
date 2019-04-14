@@ -3,44 +3,46 @@
     <div class="col-md-4"> UI Lib</div>
   </div>
 
-  <div class="row">
-    <div class="col-md-12">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search icon">
-        </div>
-    </div>
-  </div>
 
   <div class="row mb-4">
     <div class="col-md-12">
-      <form [formGroup]="filterForm" class="d-flex flex-row">
-        <div>
-            <div class="custom-control custom-radio custom-control-inline">
-                <input formControlName="weight" value="light" type="radio" id="light" name="weight" class="custom-control-input">
-                <label class="custom-control-label" for="light">Light</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                <input formControlName="weight" value="medium" type="radio" id="medium" name="weight" class="custom-control-input">
-                <label class="custom-control-label" for="medium">Medium</label>
-              </div>
-              <div class="custom-control custom-radio custom-control-inline">
-                  <input formControlName="weight" value="bold" type="radio" id="bold" name="weight" class="custom-control-input">
-                  <label class="custom-control-label" for="bold">Bold</label>
-              </div>
+      <form [formGroup]="filterForm" class="d-flex flex-column">
+        <div class="form-group">
+          <input type="text" formControlName="search" class="form-control" placeholder="Search icon">
         </div>
-        <div class="flex-grow-1"></div>
-        <div class="">
+
+        <div class="d-flex">
+          <div class="custom-control custom-radio custom-control-inline">
+              <input formControlName="weight" value="all" type="radio" id="all" name="weight" class="custom-control-input">
+              <label class="custom-control-label" for="all">All</label>
+            </div>
+          <div class="custom-control custom-radio custom-control-inline">
+              <input formControlName="weight" value="light" type="radio" id="light" name="weight" class="custom-control-input">
+              <label class="custom-control-label" for="light">Light</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input formControlName="weight" value="medium" type="radio" id="medium" name="weight" class="custom-control-input">
+              <label class="custom-control-label" for="medium">Medium</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input formControlName="weight" value="bold" type="radio" id="bold" name="weight" class="custom-control-input">
+                <label class="custom-control-label" for="bold">Bold</label>
+            </div>
+
+            <div class="flex-grow-1"></div>
             <div class="custom-control custom-checkbox">
                 <input formControlName="rounded" type="checkbox" class="custom-control-input" id="rounded">
                 <label class="custom-control-label" for="rounded">Rounded</label>
-              </div>
+            </div>
         </div>
+        
       </form>
+
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-2 mb-3" *ngFor="let i of icons$ | async" [ngbTooltip]="i">
+  <div class="icons-wrap">
+    <div class="icon-box mb-3" *ngFor="let i of icons$ | async" [ngbTooltip]="i">
       <div class="card text-center py-3">
           <i class="neon {{i}}"></i>
       </div>

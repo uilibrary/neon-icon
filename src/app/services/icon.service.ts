@@ -13,7 +13,8 @@ interface Icon {
 })
 export class IconService {
   initialFilters = {
-    weight: 'light',
+    search: '',
+    weight: 'all',
     rounded: true
   };
 
@@ -459,10 +460,12 @@ export class IconService {
     );
   }
   filterIcons(icons: string[], filterData) {
-    // console.log(filterData);
     // {weight: 'light', rounded: true}
     let filteredIcons = [];
     filteredIcons = icons.filter(i => {
+      if (filterData.weight === 'all') {
+        return true;
+      }
       if (i.indexOf(filterData.weight) !== -1) {
         return true;
       }
@@ -470,11 +473,18 @@ export class IconService {
     .filter(i => {
       if (filterData.rounded && i.indexOf('rounded') !== -1) {
         return true;
-      } else if(!filterData.rounded && i.indexOf('rounded') === -1) {
+      } else if (!filterData.rounded && i.indexOf('rounded') === -1) {
+        return true;
+      }
+    })
+    .filter(i => {
+      if (filterData.search && i.indexOf(filterData.search) !== -1) {
+        return true;
+      } else if (!filterData.search) {
         return true;
       }
     });
 
-    return of(filteredIcons)
+    return of(filteredIcons);
   }
 }

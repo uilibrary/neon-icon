@@ -27,6 +27,7 @@ export class DemoComponent implements OnInit {
 
   buildFilterForm(filterData:any = {}) {
     this.filterForm = this.fb.group({
+      search: [filterData.search || ''],
       weight: [filterData.weight || ''],
       rounded: [filterData.rounded]
     });
