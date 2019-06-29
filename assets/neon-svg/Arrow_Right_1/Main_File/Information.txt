@@ -1,0 +1,20 @@
+
+Icone Design detils:
+------------------------
+------------------------
+
+- bold
+  9 //
+- bold_rounded
+  9 // red 4 //
+
+- medium
+  line 6 // icon 9 //
+- medium_rounded
+  line 6 // icon 9 // red 4 //
+
+- light
+  line 3 // icon 4 //
+
+- light_rounded
+  line 3 // icon 4 // red 2 //
