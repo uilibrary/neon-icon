@@ -1,4 +1,19 @@
 @import "../neon/neon.css";
 @import "bootstrap.min.css";
 @import "done.min.css";
-//
+@import '~ngx-toastr/toastr';
+
+
+a {
+  &:hover, &:focus {
+    text-decoration: none !important;
+  }
+}
+
+.ngx-toastr {
+  background-color: #7367f0;
+  // color: #4e4a74 !important;
+  padding-left: 1.5rem !important;
+  box-shadow: 0 2px 12px 0 rgba(187,186,198,.6) !important;
+
+}
