@@ -23,6 +23,8 @@
     "@angular/router": "^6.1.0",
     "@ng-bootstrap/ng-bootstrap": "^4.1.1",
     "core-js": "^2.5.4",
+    "ngx-clipboard": "^12.1.2",
+    "ngx-toastr": "^10.0.4",
     "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },

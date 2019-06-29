@@ -44,6 +44,7 @@
   <div class="icons-wrap">
     <div class="icon-box mb-xxl" *ngFor="let i of icons$ | async" [ngbTooltip]="i">
       <div class="card text-center py-xxl">
+          <i class="neon copy-medium icon-copy" (click)="copyIconName(i)"></i>
           <i class="neon {{i}}"></i>
       </div>
     </div>
