@@ -21,8 +21,7 @@ export class DemoComponent implements OnInit {
     this.buildFilterForm(this.iconService.initialFilters);
     this.icons$ = this.iconService.getFilteredIcons(this.filterForm);
     this.iconService.getFilteredIcons(this.filterForm).subscribe(i => {
-      console.log(i);
-    })
+    });
   }
 
   buildFilterForm(filterData:any = {}) {

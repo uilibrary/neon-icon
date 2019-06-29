@@ -5,6 +5,9 @@ import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo/demo.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { IconFontComponent } from './icon-font/icon-font.component';
+import { HeaderComponent } from './header/header.component';
+import { DemoLayoutComponent } from './demo-layout/demo-layout.component';
 
 
 
@@ -16,6 +19,6 @@ import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
     ReactiveFormsModule,
     DemoRoutingModule
   ],
-  declarations: [DemoComponent]
+  declarations: [DemoComponent, IconFontComponent, HeaderComponent, DemoLayoutComponent]
 })
 export class DemoModule { }

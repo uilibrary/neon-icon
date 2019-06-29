@@ -15,7 +15,7 @@ export class IconService {
   initialFilters = {
     search: '',
     weight: 'all',
-    rounded: true
+    rounded: false
   };
 
   iconList = [
