@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./demo-layout.component.scss']
 })
 export class DemoLayoutComponent implements OnInit {
+  hasAlert:boolean = true;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  closeAlert() {
+    this.hasAlert = false;
+  }
 }

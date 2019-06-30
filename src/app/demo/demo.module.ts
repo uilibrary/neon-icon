@@ -6,7 +6,7 @@ import { ToastrModule } from 'ngx-toastr';
 import { DemoRoutingModule } from './demo-routing.module';
 import { DemoComponent } from './demo/demo.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbTooltipModule, NgbAlertModule } from '@ng-bootstrap/ng-bootstrap';
 import { IconFontComponent } from './icon-font/icon-font.component';
 import { HeaderComponent } from './header/header.component';
 import { DemoLayoutComponent } from './demo-layout/demo-layout.component';
@@ -19,7 +19,7 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     NgbTooltipModule,
     ClipboardModule,
-
+    NgbAlertModule,
     ReactiveFormsModule,
     DemoRoutingModule
   ],

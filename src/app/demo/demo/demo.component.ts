@@ -38,7 +38,7 @@ export class DemoComponent implements OnInit {
 
   copyIconName(name) {
     this.clibBoardService.copyFromContent(name);
-    this.toastr.show('Copied!')
+    this.toastr.show('Name copied!')
   }
 
 }
