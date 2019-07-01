@@ -11,6 +11,7 @@ import { IconFontComponent } from './icon-font/icon-font.component';
 import { HeaderComponent } from './header/header.component';
 import { DemoLayoutComponent } from './demo-layout/demo-layout.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoaderComponent } from './loader/loader.component';
 
 
 
@@ -23,6 +24,6 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     DemoRoutingModule
   ],
-  declarations: [DemoComponent, IconFontComponent, HeaderComponent, DemoLayoutComponent, FooterComponent]
+  declarations: [DemoComponent, IconFontComponent, HeaderComponent, DemoLayoutComponent, FooterComponent, LoaderComponent]
 })
 export class DemoModule { }

@@ -41,6 +41,7 @@
 
     </div>
   </div>
+  <loader *ngIf="iconService.isLoading"></loader>
 
   <div class="icons-wrap">
     <div class="icon-box mb-xxl" *ngFor="let i of icons$ | async" [ngbTooltip]="i">

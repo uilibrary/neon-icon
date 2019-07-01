@@ -17,6 +17,7 @@ export class IconService {
     weight: 'all',
     rounded: false
   };
+  isLoading: boolean;
 
   iconList = [
     'add-1-bold-rounded',
@@ -447,6 +448,7 @@ export class IconService {
   }
 
   getFilteredIcons(filterForm: FormGroup) {
+    this.isLoading = true;
     return combineLatest(
       this.getIcons(),
       filterForm.valueChanges.pipe(
@@ -455,6 +457,7 @@ export class IconService {
       )
     ).pipe(
       switchMap(([icons, filterData]) => {
+        this.isLoading = false;
         return this.filterIcons(icons, filterData);
       })
     );

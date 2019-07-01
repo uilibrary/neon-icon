@@ -1,6 +1,9 @@
-<ngb-alert *ngIf="hasAlert" type="primary" class="rounded-0" (close)="closeAlert()">
-  Done! Design System, It's Free!
-  <a href="https://uilibrary.github.io/done-design-system/" class="btn btn-raised btn-raised-default btn-sm m-0 ml-md-3">Live preview</a>
+<ngb-alert *ngIf="hasAlert" type="primary" class="rounded-0"  [dismissible]="false">
+  <div class="container position-relative">
+      Done! Design System, It's Free!
+      <a href="https://uilibrary.github.io/done-design-system/" class="btn btn-raised btn-raised-default btn-sm m-0 ml-md-3">Live preview</a>
+      <button aria-label="Close" class="close" type="button" (click)="closeAlert()"><span aria-hidden="true">×</span></button>
+  </div>
 </ngb-alert>
 <div class="container">
     <app-header></app-header>

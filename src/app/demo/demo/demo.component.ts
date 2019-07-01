@@ -13,8 +13,9 @@ export class DemoComponent implements OnInit {
   icons;
   icons$;
   filterForm: FormGroup;
+  
   constructor(
-    private iconService: IconService,
+    public iconService: IconService,
     private fb: FormBuilder,
     private clibBoardService: ClipboardService,
     private toastr: ToastrService
@@ -38,7 +39,9 @@ export class DemoComponent implements OnInit {
 
   copyIconName(name) {
     this.clibBoardService.copyFromContent(name);
-    this.toastr.show('Name copied!')
+    this.toastr.show('Name copied!', null, {
+      positionClass: 'toast-bottom-right'
+    });
   }
 
 }
