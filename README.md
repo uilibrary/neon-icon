@@ -5,7 +5,7 @@
 Neon Icon includes PNG, customizable SVG & font.
 
 ## Using Font
-
+[Live preview](https://uilibrary.github.io/neon-icon/)
 1. [Download](https://uilibrary.github.io/neon-icon/) Neon icon font.
 
 2. Include neon in your project asset folder. 
